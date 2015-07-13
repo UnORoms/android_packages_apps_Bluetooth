@@ -930,7 +930,7 @@ static jboolean setFMVolumeNative(JNIEnv *env, jobject obj, jint volume)
     ALOGI("[JNI] - setFMVolumeNative :  volume = %i,bta_path = %d ",
         volume, sCurrentBtaPath);
 
-        if ((status = sFmIf->set_volume((int)volume)) != BT_STATUS_SUCCESS) {
+        if ((status = sFmIf->set_volume((UINT16)volume)) != BT_STATUS_SUCCESS) {
             ALOGE("Failed FM setFMVolumeNative, status: %d", status);
             ret = JNI_FALSE;
         }
